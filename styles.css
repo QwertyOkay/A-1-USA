@@ -647,12 +647,22 @@ footer a {
 .max_width {
   max-width: 900px;
   margin: 0px auto;
+  padding: 0px 25px;
 }
 
 .max_width p,
-.max_width ul,
-.max_width tbody {
+.max_width ul {
   font-size: 1.5rem;
+}
+
+.max_width tbody {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .max_width tbody {
+    font-size: 1.5rem;
+  }
 }
 
 .add_bc {
