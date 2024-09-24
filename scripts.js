@@ -1,35 +1,27 @@
+let lastCloseTime = 0; // Переменная для отслеживания времени последнего закрытия окна
 
-        // setTimeout(function() {
-        //     document.getElementById('myModal').style.display = "flex";
-        // }, 15000); // Show modal after 15 seconds
-
-        // document.querySelector('.close').addEventListener('click', function() {
-        //     document.getElementById('myModal').style.display = "none";
-        // });
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Проверяем наличие модального окна в DOM
-    const modal = document.getElementById('myModal');
-    const closeButton = document.querySelector('.close');
+// Функция для показа всплывающего окна
+function showModal() {
+    const currentTime = new Date().getTime();
     
-    if (!modal || !closeButton) {
-        console.error('Модальное окно или кнопка закрытия не найдены в DOM!');
-        return;
+    // Проверяем, что прошло хотя бы 3 секунды с момента закрытия окна
+    if (currentTime - lastCloseTime >= 3000) {
+        document.getElementById('myModal').style.display = "flex";
     }
+}
 
-    // Проверяем в локальном хранилище, закрывалось ли уже модальное окно
-    if (!localStorage.getItem('modalClosed')) {
-        // Если не закрывалось, показываем модальное окно через 15 секунд
-        setTimeout(function() {
-            modal.style.display = "flex";  // Убедитесь, что используете правильное свойство CSS
-        }, 15000); // Показываем модальное окно через 15 секунд
-    }
+// Функция для скрытия всплывающего окна
+function hideModal() {
+    document.getElementById('myModal').style.display = "none";
+    lastCloseTime = new Date().getTime(); // Запоминаем время закрытия
+}
 
-    // Обработчик нажатия на кнопку закрытия модального окна
-    closeButton.addEventListener('click', function() {
-        modal.style.display = "none";
-        // Сохраняем информацию о том, что модальное окно было закрыто
-        localStorage.setItem('modalClosed', 'true');
-    });
+// Показывать окно каждые 3-5 секунд
+setInterval(function() {
+    showModal();
+}, Math.floor(Math.random() * (5000 - 3000 + 1)) + 3000); // Интервал случайный между 3 и 5 сек
+
+// Закрытие модального окна по клику
+document.querySelector('.close').addEventListener('click', function() {
+    hideModal();
 });
-

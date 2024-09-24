@@ -38,7 +38,7 @@ header {
 }
 
 .contact-info p {
-  font-size: 14px;
+  font-size: 18px;
   color: #007bff;
   margin: 0;
   margin-bottom: 15px;
@@ -51,7 +51,7 @@ header {
   font-weight: bold;
   align-self: center;
   background: rgba(0, 0, 0, 0);
-  font-size: 30px;
+  font-size: 2rem;
   border-radius: 0;
   box-shadow: none;
   position: relative;
@@ -82,7 +82,7 @@ header {
 
 .working-hours p {
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
   color: #444;
 }
 
@@ -90,6 +90,7 @@ header {
   .header-flex {
     flex-direction: column;
     text-align: center;
+    gap: 15px;
   }
 
   .logo {
@@ -107,8 +108,8 @@ header {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./img/hero.webp") no-repeat center center/cover;
+  background: linear-gradient(rgb(0 0 0 / 83%), rgb(0 0 0 / 58%)),
+    url(./img/hero.webp) no-repeat center center / cover;
   height: 500px;
   color: white;
   display: flex;
@@ -134,6 +135,27 @@ header {
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero {
+    background: linear-gradient(rgb(0 0 0 / 39%), rgb(0 0 0 / 72%)),
+      url(./img/hero.webp) no-repeat center center / cover;
+  }
+  .hero p {
+    font-size: 2rem;
+  }
+
+  .working-hours p {
+    font-size: 1.5rem;
+  }
+
+  .contact-info p {
+    font-size: 1.5rem;
+  }
 }
 
 .cta-btn {
@@ -175,17 +197,19 @@ header {
   border-radius: 5px;
   padding: 0px;
   text-align: center;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 1200px) {
   .info-box {
     padding: 20px;
+    font-size: 1.5rem;
   }
 }
 
 .info-box h2 {
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #007bff;
 }
 
@@ -204,12 +228,30 @@ header {
 
 .call-to-action p {
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .call-to-action .cta-btn {
   background-color: white;
   color: #28a745;
   padding: 15px 30px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1200px) {
+  .call-to-action h2 {
+    font-size: 4rem;
+  }
+  .call-to-action p,
+  .call-to-action .cta-btn,
+  #carriers p,
+  footer p {
+    font-size: 1.5rem !important;
+  }
+  h4,
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 /* Modal */
@@ -228,17 +270,24 @@ header {
 }
 
 .modal-content {
-  background-color: white;
   padding: 20px;
+  border-radius: 5px;
   text-align: center;
-  border-radius: 10px;
-  width: 90%;
-  /* max-width: 400px; */
+  position: relative;
+  width: 360px;
+  background-color: #f9fafc;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-content {
+    width: 450px;
+    font-size: 1.5rem;
+  }
 }
 
 .modal-content img {
-  max-width: 70%;
-  margin-bottom: 20px;
+  max-width: 60%;
+  /* margin-bottom: 20px; */
 }
 
 .close {
@@ -256,6 +305,7 @@ header {
 .link_tel {
   color: #000;
   text-decoration: none;
+  font-weight: 600;
 }
 
 /* Responsive Styles */
@@ -270,22 +320,18 @@ header {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .hero p {
-    font-size: 1rem;
-  }
-
-  .modal-content {
-    width: 95%;
+    font-size: 2rem;
   }
 }
 
 #carriers p,
 footer p {
   padding: 25px;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -320,13 +366,18 @@ footer p {
 }
 
 .feature-box h3 {
-  font-size: 18px;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 1200px) {
+  .feature-box h3 {
+    font-size: 2.5rem;
+  }
+}
 
 .feature-box p {
-  font-size: 14px;
+  font-size: 18px;
   color: #777;
 }
 
@@ -364,6 +415,9 @@ footer p {
     justify-content: flex-start;
     max-width: 70%;
   }
+  .feature-box p {
+    font-size: 1.5rem;
+  }
 }
 
 .call-image img {
@@ -379,18 +433,18 @@ footer p {
 }
 
 .call-info h2 {
-  font-size: 28px;
+  font-size: 2rem;
   color: #444;
 }
 
 .call-info h3 {
-  font-size: 36px;
+  font-size: 2rem;
   color: #2a53ff;
   margin: 15px 0;
 }
 
 .call-info p {
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
 }
 
@@ -406,11 +460,11 @@ footer p {
   }
 
   .call-info h3 {
-    font-size: 28px;
+    font-size: 2rem;
   }
 
   .call-info h2 {
-    font-size: 22px;
+    font-size: 2rem;
   }
 }
 
@@ -429,6 +483,21 @@ footer p {
   .eligibility-flex {
     flex-direction: row-reverse;
   }
+  .call-info h2 {
+    font-size: 2.5rem;
+  }
+  .call-info h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .call-info p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.call-info a {
+  text-decoration: none;
 }
 
 .eligibility-image img {
@@ -445,13 +514,13 @@ footer p {
 }
 
 .eligibility-info h2 {
-  font-size: 24px;
+  font-size: 2rem;
   color: #003366;
   margin-bottom: 15px;
 }
 
 .eligibility-info p {
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
   margin-bottom: 10px;
 }
@@ -486,12 +555,26 @@ footer p {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .eligibility-info h2 {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .eligibility-info p {
+    font-size: 1.5rem;
+  }
+  .eligibility-info ul li {
+    font-size: 1.4rem;
+    color: #0b4616;
+  }
+}
+
 footer {
   border-top: 5px solid hsl(0deg 0% 13% / 27%);
 }
 
 footer a {
-  color: #28a745;
+  color: #0b4616;
 }
 
 .footer_links {
@@ -515,14 +598,22 @@ footer a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer_links > ul > li > a {
+    font-size: 1.5rem;
+  }
 }
 
 .modal_p {
   border-radius: 10px;
-  background: #e4eaf2;
+  background: #90e16e;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
   padding: 20px;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 /* Стили модального окна */
@@ -539,13 +630,10 @@ footer a {
   align-items: center;
 }
 
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  position: relative;
-  width: auto;
+.modal-content h3 {
+  color: #003366;
+  font-weight: 800;
+  font-size: 2.2rem;
 }
 
 .close {
@@ -553,4 +641,18 @@ footer a {
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
+  background-color: #f9fafc;
+}
+
+.max_width {
+  max-width: 900px;
+  margin: 0px auto;
+}
+
+.add_bc {
+  background-color: #f9fafc;
+}
+
+.modal_p_undertel {
+  font-size: 1.3rem;
 }
