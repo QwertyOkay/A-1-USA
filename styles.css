@@ -649,6 +649,12 @@ footer a {
   margin: 0px auto;
 }
 
+.max_width p,
+.max_width ul,
+.max_width tbody {
+  font-size: 1.5rem;
+}
+
 .add_bc {
   background-color: #f9fafc;
 }
