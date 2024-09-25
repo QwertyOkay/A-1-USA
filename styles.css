@@ -270,8 +270,8 @@ header {
 }
 
 .modal-content {
-  padding: 20px;
-  border-radius: 5px;
+  /* padding: 20px; */
+  /* border-radius: 5px; */
   text-align: center;
   position: relative;
   width: 360px;
@@ -299,7 +299,8 @@ header {
   cursor: pointer;
   background: #fff;
   border-radius: 50px;
-  /* padding: 25px; */
+  color: #000;
+  font-weight: 900;
 }
 
 .link_tel {
@@ -612,7 +613,7 @@ footer a {
   }
 }
 
-.modal_p {
+/* .modal_p {
   border-radius: 10px;
   background: #90e16e;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
@@ -621,16 +622,16 @@ footer a {
   font-size: 1.5rem;
 }
 
-/* Стили модального окна */
+
 .modal {
-  display: none; /* Скрыто по умолчанию */
+  display: none; 
   position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
 }
@@ -647,6 +648,179 @@ footer a {
   align-items: center;
   cursor: pointer;
   background-color: #f9fafc;
+} */
+
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  width: 700px; /* Общая ширина модального окна */
+  max-width: 90%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden; /* Чтобы изображение и синий фон не выходили за границы */
+  gap: 0.4rem;
+  width: 600px;
+  height: 550px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-content {
+    height: 355px;
+  }
+}
+
+.modal-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column-reverse;
+  /* height: 495px; */
+  gap: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+    gap: 0px;
+  }
+}
+
+.modal-left {
+  background-color: #3b5998; /* Синий фон за изображением */
+  width: 33%;
+  /* height: 50%; */
+  width: 100%;
+  height: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-left {
+    width: 33%;
+    height: 50%;
+  }
+}
+
+.modal-left img {
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  max-width: 60%;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-left img {
+    max-width: 120%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-left {
+    max-width: 120%;
+    height: auto;
+  }
+}
+
+.modal-right {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-right {
+    justify-content: center;
+  }
+}
+
+.modal-right h3 {
+  color: #003366;
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin: 0 0 15px;
+}
+
+.modal_p {
+  background-color: #f0f0f0;
+  color: #003366;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #e4eaf2;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  color: #197aa9;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 28px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1.3px;
+}
+
+.modal_p i {
+  font-size: 1.5rem;
+  color: #003366;
+}
+
+.modal_p_undertel {
+  /* color: #6b6b6b; */
+  font-size: 1rem;
+  margin: 5px 0 0;
+  color: #002e58;
+  font-weight: 500;
+  margin: 15px 0 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .max_width {
@@ -680,7 +854,7 @@ footer a {
 
 footer p {
   padding: 10px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   line-height: 1.6;
   margin: 0px;
