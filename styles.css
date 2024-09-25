@@ -275,7 +275,8 @@ header {
   text-align: center;
   position: relative;
   width: 360px;
-  background-color: #f9fafc;
+  /* background-color: #f9fafc; */
+  background-color: #3b5998;
 }
 
 @media screen and (min-width: 1200px) {
@@ -636,12 +637,6 @@ footer a {
   align-items: center;
 }
 
-.modal-content h3 {
-  color: #003366;
-  font-weight: 800;
-  font-size: 2.2rem;
-}
-
 .close {
   display: flex;
   justify-content: flex-end;
@@ -680,7 +675,7 @@ footer a {
   display: flex;
   width: 700px; /* Общая ширина модального окна */
   max-width: 90%;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -702,6 +697,7 @@ footer a {
   flex-direction: column-reverse;
   /* height: 495px; */
   gap: 50px;
+  background-color: #f9fafc;
 }
 
 @media screen and (min-width: 1200px) {
