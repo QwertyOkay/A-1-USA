@@ -9,9 +9,12 @@ body {
 
 h4,
 h2 {
-  text-align: center;
-  font-size: 2rem;
+  /* text-align: center; */
+  /* font-size: 2rem; */
   margin-bottom: 0px;
+  font-size: 3rem;
+  text-align: left;
+  color: #007bff;
 }
 
 /* Header Styles */
@@ -244,8 +247,7 @@ header {
   }
   .call-to-action p,
   .call-to-action .cta-btn,
-  #carriers p,
-  footer p {
+  #carriers p {
     font-size: 1.5rem !important;
   }
   h4,
@@ -328,8 +330,7 @@ header {
   }
 }
 
-#carriers p,
-footer p {
+#carriers p {
   padding: 25px;
   font-size: 18px;
   text-align: center;
@@ -573,6 +574,12 @@ footer {
   border-top: 5px solid hsl(0deg 0% 13% / 27%);
 }
 
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 30px 100px 0px;
+  }
+}
+
 footer a {
   color: #0b4616;
 }
@@ -598,12 +605,12 @@ footer a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 @media screen and (min-width: 1200px) {
   .footer_links > ul > li > a {
-    font-size: 1.5rem;
+    font-size: 18px;
   }
 }
 
@@ -671,4 +678,18 @@ footer a {
 
 .modal_p_undertel {
   font-size: 1.3rem;
+}
+
+footer p {
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0px;
+}
+
+@media screen and (min-width: 1200px) {
+  footer p {
+    font-size: 18px;
+  }
 }
