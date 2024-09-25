@@ -9,12 +9,10 @@ body {
 
 h4,
 h2 {
-  /* text-align: center; */
+  text-align: center;
   /* font-size: 2rem; */
   margin-bottom: 0px;
   font-size: 3rem;
-  text-align: left;
-  color: #007bff;
 }
 
 /* Header Styles */
@@ -692,4 +690,10 @@ footer p {
   footer p {
     font-size: 18px;
   }
+}
+
+.max_width h2 {
+  text-align: left;
+  color: #007bff;
+  text-align: left;
 }
