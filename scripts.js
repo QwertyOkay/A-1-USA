@@ -1,27 +1,25 @@
-let lastCloseTime = 0; // Переменная для отслеживания времени последнего закрытия окна
 
-// Функция для показа всплывающего окна
-function showModal() {
-    const currentTime = new Date().getTime();
-    
-    // Проверяем, что прошло хотя бы 1 минута (60000 миллисекунд) с момента закрытия окна
-    if (currentTime - lastCloseTime >= 60000) {
+    // Функция для отображения модального окна
+    function showModal() {
         document.getElementById('myModal').style.display = "flex";
     }
-}
 
-// Функция для скрытия всплывающего окна
-function hideModal() {
-    document.getElementById('myModal').style.display = "none";
-    lastCloseTime = new Date().getTime(); // Запоминаем время закрытия
-}
+    // Функция для скрытия всплывающего окна
+    function hideModal() {
+        document.getElementById('myModal').style.display = "none";
+    }
 
-// Показывать окно каждые 1 минуту
-setInterval(function() {
-    showModal();
-}, 60000); // Интервал 1 минута (60000 миллисекунд)
+    // Добавление обработчиков событий после загрузки DOM
+    document.addEventListener('DOMContentLoaded', function () {
+        // Показывать окно через 10-15 секунд после загрузки страницы
+        const showModalTimeout = Math.floor(Math.random() * (15000 - 10000 + 1)) + 10000; // Рандомное время от 10 до 15 секунд
+        setTimeout(showModal, showModalTimeout);
 
-// Закрытие модального окна по клику
-document.querySelector('.close').addEventListener('click', function() {
-    hideModal();
-});
+        // Закрытие модального окна по клику на крестик
+        const closeButton = document.querySelector('.close');
+        if (closeButton) {
+            closeButton.addEventListener('click', function () {
+                hideModal();
+            });
+        }
+    });
